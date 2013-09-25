@@ -1,6 +1,7 @@
 ﻿// Disable ReSharper naming conventions due to JSON strings
 // ReSharper disable InconsistentNaming
 
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace CrestParser.Models
@@ -54,7 +55,7 @@ namespace CrestParser.Models
         public string Name { get; set; }
     }
 
-    public class Item
+    public class District
     {
         public string CloneRate_str { get; set; }
         public bool Generating { get; set; }
@@ -85,10 +86,12 @@ namespace CrestParser.Models
         public string Clones_str { get; set; }
     }
 
-    public class RootObject
+
+    public class DistrictRootObject
     {
+        [JsonProperty]
         public string TotalCount_str { get; set; }
-        public List<Item> Items { get; set; }
+        public List<District> Items { get; set; }
         public int PageCount { get; set; }
         public string PageCount_str { get; set; }
         public int TotalCount { get; set; }
