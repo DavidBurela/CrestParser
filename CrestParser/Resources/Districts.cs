@@ -14,6 +14,12 @@ namespace CrestParser.Resources
         {
             var httpClient = HttpClientExtensions.CreateGzipEnabledClient();
             var districtsJson = await httpClient.GetStringAsync("http://public-crest.eveonline.com/districts/");
+            
+            return ParseDistricts(districtsJson);
+        }
+
+        public static List<District> ParseDistricts(string districtsJson)
+        {
             var rootObject = JsonConvert.DeserializeObject<DistrictRootObject>(districtsJson);
 
             return rootObject.Items;
