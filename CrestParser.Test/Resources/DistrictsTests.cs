@@ -19,7 +19,7 @@ namespace CrestParser.Test.Resources
             
 
             // Act
-            var d = Districts.ParseDistricts(str);
+            var d = DistrictsResource.ParseDistricts(str);
 
             // Assert
             Assert.IsTrue(d.Count > 100);

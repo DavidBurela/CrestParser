@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CrestParser.Resources
 {
-    public class Districts
+    public class DistrictsResource
     {
         public async Task<List<District>> GetDistricts()
         {

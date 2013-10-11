@@ -41,9 +41,10 @@
     <Compile Include="Helpers\HttpClientExtensions.cs" />
     <Compile Include="Models\District.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Districts.cs" />
+    <Compile Include="Resources\DistrictsResource.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
