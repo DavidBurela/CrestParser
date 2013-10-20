@@ -10,7 +10,7 @@ namespace CrestParser.Resources
 {
     public class DistrictsResource
     {
-        public async Task<List<District>> GetDistricts()
+        public static async Task<List<District>> GetDistricts()
         {
             var httpClient = HttpClientExtensions.CreateGzipEnabledClient();
             var districtsJson = await httpClient.GetStringAsync("http://public-crest.eveonline.com/districts/");
